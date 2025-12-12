@@ -75,10 +75,17 @@ export default function Home() {
                 An essential course for adults 55-70 who want to secure their financial future in today's changing
                 economy.
               </p>
-              {/* Call-to-action button that links to registration page */}
-              <Button asChild size="lg" className="text-lg bg-orange-500 hover:bg-orange-600">
-                <Link href="/register">Register Now</Link>
-              </Button>
+              {/* Call-to-action buttons */}
+              <div className="flex flex-wrap gap-4">
+                <form action="/api/checkout" method="POST">
+                  <Button type="submit" size="lg" className="text-lg bg-orange-500 hover:bg-orange-600">
+                    Buy Now - $49
+                  </Button>
+                </form>
+                <Button asChild size="lg" variant="outline" className="text-lg bg-white/10 border-white text-white hover:bg-white/20">
+                  <Link href="#events">View Classes</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
